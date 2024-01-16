@@ -4,11 +4,11 @@ body{
     padding: 0;
     background-color: pink;
     }
-    .canvas{
+
+.canvas{
     height: 100%;
     width: fit-content;
     }
-    
     
     .canvas #guy{
     height: 100px;
@@ -16,4 +16,9 @@ body{
     opacity: 1;
     position: relative;
     }
-    
+    .canvas #ball{
+        height: 100px;
+        width: 100px;
+        opacity: 1;
+        position: relative;
+        }

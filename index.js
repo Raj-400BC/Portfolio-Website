@@ -57,4 +57,41 @@ document.addEventListener('DOMContentLoaded', function () {
     
     moveGuy();
     });
+
+
+    window.onload = function() {
+        // Get the ball element
+        let ball = document.getElementById('ball');
+
+        // Set initial position and velocity
+        let posX = 0;
+        let posY = 0;
+        let velocityX = 5;
+        let velocityY = 5;
+
+        // Function to update ball position
+        function updateBall() {
+            // Update position
+            posX += velocityX;
+            posY += velocityY;
+
+            // Bounce off the walls
+            if (posX < 0 || posX > window.innerWidth - ball.clientWidth) {
+                velocityX = -velocityX;
+            }
+            if (posY < 0 || posY > window.innerHeight - ball.clientHeight) {
+                velocityY = -velocityY;
+            }
+
+            // Update ball position
+            ball.style.left = posX + 'px';
+            ball.style.top = posY + 'px';
+
+            // Repeat the update using requestAnimationFrame
+            requestAnimationFrame(updateBall);
+        }
+
+        // Start the animation
+        updateBall();
+    };
     
