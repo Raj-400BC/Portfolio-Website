@@ -1,0 +1,17 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+.canvas{
+    height: 100%;
+    width: fit-content;
+}
+
+.canvas #guy{
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    position: relative;
+}
