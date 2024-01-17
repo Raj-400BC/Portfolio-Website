@@ -4,7 +4,6 @@
   --background-color: #050301;
   --font-family: "Playfair Display", serif;
   overflow: hidden;
-  
 }
 
 body {
@@ -18,7 +17,7 @@ body {
     position:absolute;
     top: 15%;
     left: -3vw;
-    background-image: url(back.webp);
+    background-image: url(images/back.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -31,7 +30,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-  /* border:1px solid red; */
+  border:1px solid red;
+  margin: 0;
   text-align: center;
 
 }
