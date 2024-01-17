@@ -7,6 +7,9 @@
 //     down: false
 //     };
 //     let movingValue = 5;
+
+// const { relative } = require("path");
+
     
     
 //     function moveGuy() {
@@ -95,3 +98,11 @@
 //     //     updateBall();
 //     // };
     
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     let visi = document.getElementById('visi');
+//     function divVisi(){
+//         visi.style.display = "flex";
+//     }
+//     //  divVisi();
+// })
