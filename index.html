@@ -9,13 +9,22 @@
       </style>
     <title>Project</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 </head>
 <body>
-    <div class="backText">
-        <h1>MAYUR</h1>
+    <button id="myBtn">Try it</button>
+
+    <div class="backText" id="backText">
+        <h1>MAYUR<span>.</span></h1>
     </div>
-    <div class="back"></div>
+    
+    <div id="visi">
+        <div id="info">
+        <!-- <h2>Full Stack Developer crafting seamless UIs, <br>contributing to open-source, and balancing code with play!</h2> -->
+<h2>Passionate Full Stack Developer with expertise in frontend technologies, crafting seamless user interfaces, and architecting robust server-side applications. Proficient in HTML, CSS, JavaScript, React, Bootstrap, Tailwind CSS, Node.js, Express.js, PostgreSQL, and GitHub workflows. Currently exploring Java, DSA, and honing problem-solving skills. Excited about open-source contributions and proficient in designing/consuming RESTful APIs. Insatiable passion for learning, sharing knowledge, and finding the perfect balance between code and play! 🚀⚽🏓</h2>
+        </div>
+    </div>
+    <div class="back" id="back"></div>
     <div class="header">
         <div class="logo">
             <h3>RAJ</h3>
@@ -23,9 +32,10 @@
         <div class="nav-links">
             <ul>
                 <!---Navbar --->
-                <li><a href="#header" onclick="toggleMenu()">HOME</a></li>
-                <li><a href="table/table.html" onclick="toggleMenu()">BLOG</a></li>
-                <li><a href="#creators" onclick="toggleMenu()">SERVICES</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="" >BLOG</a></li>
+                <li><a href="">SERVICES</a></li>
+                <!-- <li><a href="#creators" onclick="toggleMenu()">SERVICES</a></li> -->
             </ul>
         </div>
     </div>
@@ -36,4 +46,29 @@
     </div> -->
 
 </body>
+<script>
+//     document.getElementById("dot").addEventListener("click", function() {
+//     let one = document.getElementById('visi');
+//     one.style.display = 'flex';
+//   });
+document.getElementById("myBtn").addEventListener("click", function() {
+    let one = document.getElementById('visi');
+    let back = document.getElementById('back');
+    let backText = document.getElementById('backText');
+
+    if(one.style.display != 'flex'){
+        one.style.display = 'flex'
+        back.style.backgroundImage = 'none'
+        backText.style.display = "none"
+    }
+    else{
+        one.style.display = 'none'
+        back.style.backgroundImage = 'url(images/back.webp)'
+        backText.style.display = "inline-block"
+
+    }
+    ;
+//   alert("Hello World!");
+});
+</script>
 </html>
