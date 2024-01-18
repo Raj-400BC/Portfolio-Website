@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap');
-      </style>
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap");
+    </style>
     <title>Project</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="index.js"></script> -->
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
     <button id="myBtn">Try it</button>
-
-    <div class="backText" id="backText">
-        <h1>MAYUR<span>.</span></h1>
-    </div>
-    
-    <div id="visi">
-        <div id="info">
-        <!-- <h2>Full Stack Developer crafting seamless UIs, <br>contributing to open-source, and balancing code with play!</h2> -->
-<h2>Passionate Full Stack Developer with expertise in frontend technologies, crafting seamless user interfaces, and architecting robust server-side applications. Proficient in HTML, CSS, JavaScript, React, Bootstrap, Tailwind CSS, Node.js, Express.js, PostgreSQL, and GitHub workflows. Currently exploring Java, DSA, and honing problem-solving skills. Excited about open-source contributions and proficient in designing/consuming RESTful APIs. Insatiable passion for learning, sharing knowledge, and finding the perfect balance between code and play! 🚀⚽🏓</h2>
-        </div>
-    </div>
     <div class="back" id="back"></div>
     <div class="header">
-        <div class="logo">
-            <h3>RAJ</h3>
-        </div>
-        <div class="nav-links">
-            <ul>
-                <!---Navbar --->
-                <li><a href="">HOME</a></li>
-                <li><a href="" >BLOG</a></li>
-                <li><a href="">SERVICES</a></li>
-                <!-- <li><a href="#creators" onclick="toggleMenu()">SERVICES</a></li> -->
-            </ul>
-        </div>
+      <div class="logo">
+        <h3>RAJ</h3>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <!---Navbar --->
+          <li><a href="">HOME</a></li>
+          <li><a href="">BLOG</a></li>
+          <li><a href="">SERVICES</a></li>
+          <!-- <li><a href="#creators" onclick="toggleMenu()">SERVICES</a></li> -->
+        </ul>
+      </div>
     </div>
-   
-    <!-- <div class="canvas">
-        <img id="guy" src="guy.png" alt="">
-        <img id="ball" src="ball.png" alt="">
-    </div> -->
+    <div class="backText" id="backText">
+      <h1>MAYUR<span>.</span></h1>
+    </div>
 
-</body>
-<script>
-//     document.getElementById("dot").addEventListener("click", function() {
-//     let one = document.getElementById('visi');
-//     one.style.display = 'flex';
-//   });
-document.getElementById("myBtn").addEventListener("click", function() {
-    let one = document.getElementById('visi');
-    let back = document.getElementById('back');
-    let backText = document.getElementById('backText');
+    <div id="visi">
+      <div id="info">
+        <h2>
+          Passionate Full Stack Developer with expertise in frontend
+          technologies, crafting seamless user interfaces, and architecting
+          robust server-side applications. Proficient in HTML, CSS, JavaScript,
+          React, Bootstrap, Tailwind CSS, Node.js, Express.js, PostgreSQL, and
+          GitHub workflows. Currently exploring Java, DSA, and honing
+          problem-solving skills. Excited about open-source contributions and
+          proficient in designing/consuming RESTful APIs. Insatiable passion for
+          learning, sharing knowledge, and finding the perfect balance between
+          code and play! 🚀⚽🏓
+        </h2>
+      </div>
+    </div>
+  </body>
+  <script>
+  document.getElementById("myBtn").addEventListener("click", function () {
+    let one = document.getElementById("visi");
+    let back = document.getElementById("back");
+    let backText = document.getElementById("backText");
+    let myBtn = document.getElementById("myBtn");
 
-    if(one.style.display != 'flex'){
-        one.style.display = 'flex'
-        back.style.backgroundImage = 'none'
-        backText.style.display = "none"
+    if (one.style.display != "flex") {
+      one.style.display = "flex";
+      console.log("btn clicked");
+      back.style.backgroundImage = "none";
+      backText.style.display = "none";
+      myBtn.style.position = "absolute";
+      myBtn.style.left = "80%";
+      myBtn.style.top = "19%";
+      myBtn.style.transform = "translate(-50%,-50%)";
+    } else {
+      one.style.display = "none";
+      myBtn.style.left = "0%";
+      myBtn.style.top = "0%";
+      myBtn.style.transform = "none";
+      back.style.backgroundImage = "url(images/back.webp)";
+      backText.style.display = "inline-block";
     }
-    else{
-        one.style.display = 'none'
-        back.style.backgroundImage = 'url(images/back.webp)'
-        backText.style.display = "inline-block"
-
-    }
-    ;
-//   alert("Hello World!");
-});
-</script>
+  });
+    
+  </script>
 </html>
