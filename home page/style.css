@@ -1,19 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+
 :root {
   --nav-hover-color: #fbf5df;
   --heading-color: rgb(230, 25, 120);
-  --background-color: #262626;
+  --background-color: #000000;
   --font-family: "Playfair Display", serif;
   --font-color: #fbfbf9;
   overflow: hidden;
+  /* scroll-behavior: smooth; */
+  cursor: none;
 }
 
 body {
- 
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   box-sizing: border-box;
   padding: 0;
   background-color: var(--background-color);
@@ -30,6 +33,7 @@ body {
   width: 100vw;
   animation: fadeIn ease 3s;
   z-index: 1;
+  /* opacity:.9; */
 }
 .header {
   position: absolute;
@@ -38,9 +42,13 @@ body {
   width: 100%;
   height: fit-content;
   display: flex;
+  z-index: 10;
+  font-size: 17px;
 }
 .header .logo {
-  font-family: var(--font-family), Arial, Helvetica, sans-serif;
+  /* font-family: var(--font-family), Arial, Helvetica, sans-serif;
+   */
+  font-family: PexicoMicro-Regular, sans-serif;
   position: relative;
   color: var(--font-color);
   font-size: medium;
@@ -49,7 +57,8 @@ body {
 }
 .header .nav-links {
   margin-left: 70%;
-  font-family: "Exo 2", sans-serif;
+  /* font-family: "Exo 2", sans-serif; */
+  font-family: PexicoMicro-Regular, sans-serif;
 }
 .header .nav-links ul {
   padding: 0;
@@ -57,7 +66,7 @@ body {
 }
 .header .nav-links ul li {
   list-style: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   display: inline-block;
 }
 
@@ -67,11 +76,13 @@ body {
   text-decoration: none;
 }
 .nav-links ul li a:hover {
-  color: var(--nav-hover-color);
+  /* color: var(--nav-hover-color); */
+  color: #c1fd9e;
   text-decoration: none;
-  /* transition: 0.5s;
+  cursor: none;
+  transition: 0.5s;
       border-bottom: .1rem solid var(--font-color);
-      padding-bottom: .2rem; */
+      padding-bottom: .2rem;
 }
 
 .backText {
@@ -79,14 +90,18 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  font-family: "Source Code Pro", monospace;
   /* border:1px solid red; */
   margin: 0;
   text-align: center;
+  /* animation: fadeInText ease 3s; */
 }
 .backText h1 {
+  
   color: #1985a1;
   font-size: 300px;
-  opacity: 0.7;
+  z-index: 0;
+  opacity: 0.3;
 }
 .backText h1 span {
   position: absolute;
@@ -94,7 +109,7 @@ body {
   top: 15px;
   right: 50px;
   color: transparent;
-  -webkit-text-stroke: 2px #8338ec;
+  -webkit-text-stroke: 2px #fff;
 }
 /* .backText h3 {
   color:#8338ec ;
@@ -130,16 +145,26 @@ body {
 
 #visi #info h2 {
   color: var(--font-color);
-  font-family: var(--font-family);
+  /* font-family: var(--font-family); */
+  font-family: PexicoMicro-Regular, sans-serif;
+
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    top: 100px;
+    top: 300px;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    top: -100px;
+  }
+  100% {
   }
 }
 
@@ -161,4 +186,199 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@font-face {
+  font-family: "PexicoMicro-Regular";
+  src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot");
+  src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.svg#PexicoMicro-Regular")
+      format("svg");
+}
+
+.cursor {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border: 1px solid #c1fd9e;
+
+  border-radius: 0px 0px 0px 100%;
+
+  border-left: transparent;
+  border-bottom: transparent;
+
+  z-index: 100;
+  pointer-events: none; /* ensures that the custom cursor doesn't interfere with interactions with other elements on the page*/
+  transition: transform 0.1s ease-out;
+  animation: pulse 2s infinite;
+}
+
+.cursor::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  /* border: 1px solid var(--font-color); */
+  border: 1px solid #c1fd9e;
+  margin: 3px -5px;
+  border-radius: 0px 0px 0px 100%;
+
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+  animation: pulse 4s infinite;
+}
+
+/* @-moz-keyframes pulse {
+  0% {
+    opacity: 0.2;
+    height: .5em;
+    width: .5em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  50% {
+    opacity: 0.9;
+    height: 2em;
+    width:2em;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+  }
+  100% {
+    opacity: 0.2;
+    height: .5em;
+    width: .5em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0.2;
+    height: 1em;
+    width: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  50% {
+    opacity: 0.9;
+    height: 3em;
+    width: 3em;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+  }
+  100% {
+    opacity: 0.2;
+    height: 1em;
+    width: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+}
+@-o-keyframes pulse {
+  0% {
+    opacity: 0.2;
+    height: 1em;
+    width: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+  50% {
+    opacity: 0.9;
+    height: 3em;
+    width: 3em;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+  }
+  100% {
+    opacity: 0.2;
+    height: 1em;
+    width: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+  }
+} */
+/* @keyframes pulse {
+  0% {
+    opacity: 0.2;
+    height: 0.5em;
+    width: 0.5em;
+    margin-top: -0.1em;
+    margin-left: -0.1em;
+  }
+  50% {
+    opacity: 0.9;
+    height: 1em;
+    width: 1em;
+    margin-top: -0.3em;
+    margin-left: -0.3em;
+  }
+  100% {
+    opacity: 0.2;
+    height: 0.5em;
+    width: 0.5em;
+    margin-top: -0.1em;
+    margin-left: -0.1em;
+  }
+} */
+
+/* #nest{
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 90%;
+  left: 90vw;
+} */
+
+
+.btn-masterful {
+  background-color:#c1fd9e;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  /* position: relative; */
+  position: absolute;
+  top: 60%;
+  left: 80vw;
+  overflow: hidden;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: PexicoMicro-Regular, sans-serif;
+  opacity: .4;
+}
+
+.btn-masterful .icon {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  font-size: 24px;
+
+}
+.btn-masterful .btn-txt{
+  padding-left: .5rem;
+}
+.btn-masterful:hover {
+  background-color: #018dc5;
+  opacity: 1;
+}
+
+.btn-masterful:hover .icon {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {transform: translateY(-50%) rotate(0deg);}
+  to {transform: translateY(-50%) rotate(360deg);}
+}
+.attribute{
+  position: absolute;
+  bottom: 10px;
 }

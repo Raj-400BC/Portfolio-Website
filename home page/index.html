@@ -4,35 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap");
     </style>
-    <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
   </head>
   <body>
-    <button id="myBtn">Try it</button>
+    <!-- <button id="myBtn">Try it</button> -->
+    <button class="btn btn-masterful" id="myBtn">
+      <span class="icon">&#x1F680;</span>
+      <span class="btn-txt">Click me!</span>
+  </button>
     <div class="back" id="back"></div>
     <div class="header">
-      <div class="logo">
-        <h3>RAJ</h3>
+      <div class="logo" >
+        <h3 id="logo">RAJ</h3>
       </div>
-      <div class="nav-links">
+      <div class="nav-links" id="nav">
         <ul>
           <!---Navbar --->
           <li><a href="">HOME</a></li>
-          <li><a href="">BLOG</a></li>
+          <li><a href="/blog page/blog.html">BLOG</a></li>
           <li><a href="">SERVICES</a></li>
           <!-- <li><a href="#creators" onclick="toggleMenu()">SERVICES</a></li> -->
         </ul>
       </div>
     </div>
     <div class="backText" id="backText">
-      <h1>MAYUR<span>.</span></h1>
-      <!-- <h3>FRONTEND DEVELOPER</h3> -->
-    </div>
+   <h1>Mayur</h1>
+   <!-- <a href=""><img src="/images/Unknown.png" id="nest"></a> -->
 
+      <!-- <h3>FRONTEND DEVELOPER</h3> -->
+      <!-- <i class="fa fa-hand-pointer-o" style="font-size:24px;"></i> -->
+    </div>
     <div id="visi">
       <div id="info">
         <h2>
@@ -48,6 +57,8 @@
         </h2>
       </div>
     </div>
+    <div class="cursor" id="cursor"></div>
+    <!-- <div class="custom-cursor"></div> -->
   </body>
   <script>
   document.getElementById("myBtn").addEventListener("click", function () {
@@ -64,16 +75,21 @@
       myBtn.style.position = "absolute";
       myBtn.style.left = "80%";
       myBtn.style.top = "19%";
-      myBtn.style.transform = "translate(-50%,-50%)";
+      // myBtn.style.transform = "translate(-50%,-50%)";
     } else {
       one.style.display = "none";
-      myBtn.style.left = "0%";
-      myBtn.style.top = "0%";
-      myBtn.style.transform = "none";
+      myBtn.style.left = "80vw";
+      myBtn.style.top = "60%";
+      // myBtn.style.transform = "none";
       back.style.backgroundImage = "url(/images/back.webp)";
       backText.style.display = "inline-block";
     }
   });
-    
+    const cursor = document.getElementById('cursor')
+    document.addEventListener('mousemove', e =>{
+      cursor.setAttribute("style" , "top:"+(e.pageY-10 )+ "px;left:"+ (e.pageX-10) + "px" );
+
+    })
+
   </script>
 </html>
