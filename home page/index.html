@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 
-    <style>
+    <!-- <style>
       @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap");
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <title>Home</title>
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
   </head>
   <body>
-    <!-- <button id="myBtn">Try it</button> -->
+    
     <button class="btn btn-masterful" id="myBtn">
       <span class="icon">&#x1F680;</span>
       <span class="btn-txt">Click me!</span>
@@ -28,21 +27,44 @@
       <div class="nav-links" id="nav">
         <ul>
           <!---Navbar --->
-          <li><a href="">HOME</a></li>
+          <li><a href="" id="cap1">HOME</a></li>
           <li><a href="/blog page/blog.html">BLOG</a></li>
           <li><a href="">SERVICES</a></li>
-          <!-- <li><a href="#creators" onclick="toggleMenu()">SERVICES</a></li> -->
         </ul>
       </div>
     </div>
     <div class="backText" id="backText">
    <h1>Mayur</h1>
-   <!-- <a href=""><img src="/images/Unknown.png" id="nest"></a> -->
 
-      <!-- <h3>FRONTEND DEVELOPER</h3> -->
-      <!-- <i class="fa fa-hand-pointer-o" style="font-size:24px;"></i> -->
     </div>
     <div id="visi">
+      <div class="visiHeader">
+        <div class="visiLinks">
+          <!---About Footer --->
+          <ul>
+            <li>
+              <img src="/images/logo/linkedin.png" class="logo1 namelogo" id="linkedin">
+              <span id="linkedinhover" class="linkhover">Linkedin</span>
+            </li>
+            <li>
+              <img src="/images/logo/github.png" class="logo1 namelogo" id="github">
+              <span id="githover" class="linkhover">GitHub</span>
+            </li>
+            <li>
+              <img src="/images/logo/telegram.png" class="logo1 namelogo" id="telegram">
+              <span id="telegramhover" class="linkhover">Telegram</span>
+            </li>
+            <li>
+              <img src="/images/logo/linkedin.png" class="logo1 namelogo" id="linkedin">
+              <span id="linkedinhover" class="linkhover">Linkedin</span>
+            </li>
+            <li>
+              <img src="/images/logo/github.png" class="logo1 namelogo" id="github">
+              <span id="githover" class="linkhover">GitHub</span>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div id="info">
         <h2>
           Passionate Full Stack Developer with expertise in frontend
@@ -75,14 +97,16 @@
       myBtn.style.position = "absolute";
       myBtn.style.left = "80%";
       myBtn.style.top = "19%";
+      myBtn.innerHTML = 'Close'
       // myBtn.style.transform = "translate(-50%,-50%)";
     } else {
       one.style.display = "none";
-      myBtn.style.left = "80vw";
-      myBtn.style.top = "60%";
+      myBtn.style.left = "75vw";
+      myBtn.style.top = "47%";
       // myBtn.style.transform = "none";
       back.style.backgroundImage = "url(/images/back.webp)";
       backText.style.display = "inline-block";
+      myBtn.innerHTML = "Click me!"
     }
   });
     const cursor = document.getElementById('cursor')
@@ -90,6 +114,43 @@
       cursor.setAttribute("style" , "top:"+(e.pageY-10 )+ "px;left:"+ (e.pageX-10) + "px" );
 
     })
+  
 
+
+    window.onload = function() {
+        // Get the ball element
+        let ball = document.getElementById('myBtn');
+
+        // Set initial position and velocity
+        let posX = 0;
+        let posY = 0;
+        let velocityX = 3;
+        let velocityY = 3;
+
+        // Function to update ball position
+        function updateBall() {
+            // Update position
+            posX += velocityX;
+            posY += velocityY;
+
+            // Bounce off the walls
+            if (posX < 0 || posX > window.innerWidth - ball.clientWidth) {
+                velocityX = -velocityX;
+            }
+            if (posY < 0 || posY > window.innerHeight - ball.clientHeight) {
+                velocityY = -velocityY;
+            }
+
+            // Update ball position
+            ball.style.left = posX + 'px';
+            ball.style.top = posY + 'px';
+
+            // Repeat the update using requestAnimationFrame
+            requestAnimationFrame(updateBall);
+        }
+
+        // Start the animation
+        updateBall();
+    };
   </script>
 </html>
