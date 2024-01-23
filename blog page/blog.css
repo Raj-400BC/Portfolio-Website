@@ -2,7 +2,7 @@
     --nav-hover-color: #fbf5df;
     --heading-color: rgb(230, 25, 120);
     --background-color: #262626;
-    --font-family: "Playfair Display", serif;
+    /* --font-family: "Playfair Display", serif; */
     --font-color: #fbfbf9;
     overflow: hidden;
   }
@@ -10,7 +10,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+background: linear-gradient(90deg, rgb(68, 67, 95) 0%, rgba(9,9,121,1) 35%, rgb(1, 116, 139) 100%);
+
   }
 body {
     margin: 0;
@@ -18,27 +20,35 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+  font-family: PexicoMicro-Regular, sans-serif;
+
   }
   
   .blogContainer {
     position: relative;
-    top: -10vh;
+    top: 40vh;
     width: 800px;
-    height:fit-content;
+    height:400px;
     border: solid 1px pink;
     color: var(--font-color);
-  font-family: "Exo 2", sans-serif;
+  /* font-family: "Exo 2", sans-serif; */
+  font-family: "Source Code Pro", monospace;
+
+  /* font-family: "PexicoMicro-Regular", sans-serif; */
+/* overflow: scroll; */
   text-align: center;
 
   }
 
   .blog{
+   
     display: block;
     /* position: absolute; */
     /* top: -10vh; */
     height: 150px;
     width: 800px;
     border: solid 1px red;
+  font-family: "Exo 2", sans-serif;
     margin-bottom: 10px;
   }
 
@@ -51,6 +61,9 @@ body {
   }
 
   #btn{
+  font-family: PexicoMicro-Regular, sans-serif;
+  font-family: "Source Code Pro", monospace;
+
     position: absolute;
     right: 0;
     border: 1px solid red;
@@ -61,3 +74,45 @@ body {
     margin: -35px 10px;
     text-decoration: none;
   }
+  @font-face {
+    font-family: "PexicoMicro-Regular";
+    src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot");
+    src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.svg#PexicoMicro-Regular")
+        format("svg");
+  }
+  .floatDiv{
+    position: absolute;
+    border: 1px solid yellow;
+    overflow: visible;
+    height: 200px;
+    /* left: 0;
+top: 0;
+transform: rotate(0deg);
+    transition-property: transform ,top , left ;
+    transition-duration: .5s;
+    transition-timing-function: ease-in; */
+  }
+  .floimg{
+    display: block;
+    height: 200px;
+    float: left;
+    margin: -60px -10px ;
+    /* transition-delay: ; */
+  }
+
+  /* .floatDiv:hover{
+    transform: rotate(-180deg);
+    top: -60vh;
+    left: -20vw;
+  } */
+
+
+ 
