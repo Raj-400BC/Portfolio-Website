@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap');
+
 :root {
   --nav-hover-color: #fbf5df;
   --font-family:PexicoMicro-Regular, sans-serif;
@@ -200,19 +202,28 @@ body {
   height: 40px;
   width: 40px;
 }
+.location{
+  font-family: var(--font-family);
+  position: absolute;
+  left: 5%;
+  top: 95%;
+  z-index: 4;
+  font-size: 12px;
+}
+.location a{
+  color: var(--theme-color);
+  text-decoration: none;
+  cursor: none;
 
-
+}
 .cursor {
   position: absolute;
   height: 10px;
   width: 10px;
   border: 1px solid var(--theme-color);
-
   border-radius: 0px 0px 0px 100%;
-
   border-left: transparent;
   border-bottom: transparent;
-
   z-index: 100;
   pointer-events: none;
 }
@@ -261,6 +272,8 @@ body {
   position: absolute;
   bottom: 10px;
 }
+
+
 
 
 @keyframes fadeIn {
