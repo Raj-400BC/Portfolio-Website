@@ -1,77 +1,62 @@
-document.getElementById("myBtn").addEventListener("click", function () {
-    let one = document.getElementById("visi");
-    let back = document.getElementById("back");
-    let backText = document.getElementById("backText");
-    let myBtn = document.getElementById("myBtn");
+const cursor = document.getElementById("cursor");
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top:" + (e.pageY - 10) + "px;left:" + (e.pageX - 10) + "px"
+  );
+});
 
-    if (one.style.display != "flex") {
-      one.style.display = "flex";
-      console.log("btn clicked");
-      back.style.backgroundImage = "none";
-      backText.style.display = "none";
-      myBtn.style.position = "absolute";
-      myBtn.style.left = "80%";
-      myBtn.style.top = "19%";
-      myBtn.innerHTML = 'Close'
-      // myBtn.style.transform = "translate(-50%,-50%)";
-    } else {
-      one.style.display = "none";
-      myBtn.style.left = "75vw";
-      myBtn.style.top = "47%";
-      // myBtn.style.transform = "none";
-      back.style.backgroundImage = "url(/images/back1.webp)";
-      backText.style.display = "inline-block";
-      myBtn.innerHTML = "Click me!"
+window.onload = function () {
+  // Get the backText element
+  let nameText = document.getElementById("nameText");
+  let myImg = document.getElementById("myImg");
+  let backText = document.getElementById("backText");
+  let visi = document.getElementById("visi");
+  // Set initial font-size
+
+  // Wait for 3 seconds and then reduce the font-size with a smooth transition
+  setTimeout(function () {
+    nameText.style.transition = "font-size 0.5s"; // Adjust the duration as needed
+    nameText.style.fontSize = "200px";
+  }, 3000);
+
+  // Positioning the Name in the left top
+  setTimeout(function () {
+    backText.style.transition = "left 0.5s , top 0.5s"; // Adjust the duration as needed
+    backText.style.left = "-130px";
+    backText.style.top = "0px";
+  }, 3500);
+
+  //AboutMe transition
+  setTimeout(function () {
+    visi.style.display = "flex";
+    visi.style.transition = "left 0.5s , top 0.5s"; // Adjust the duration as needed
+    visi.style.left = "400px";
+    visi.style.top = "550px";
+  }, 4000);
+
+  // Imgae transition
+  setTimeout(function () {
+    myImg.style.transition = "left 1.5s";
+    myImg.style.left = "650px";
+  }, 3000);
+  setTimeout(function() {
+    var navLinks = document.querySelectorAll('.header .nav-links ul li');
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].style.transition = "letter-spacing 0.5s"; // Adjust the duration as needed
+      navLinks[i].style.letterSpacing = "0px";
+
     }
-  });
-    const cursor = document.getElementById('cursor')
-    document.addEventListener('mousemove', e =>{
-      cursor.setAttribute("style" , "top:"+(e.pageY-10 )+ "px;left:"+ (e.pageX-10) + "px" );
 
-    })
+   
+  }, 1000);
   
+  
+};
 
-
-    window.onload = function() {
-        // Get the ball element
-        let ball = document.getElementById('myBtn');
-
-        // Set initial position and velocity
-        let posX = 0;
-        let posY = 0;
-        let velocityX = 3;
-        let velocityY = 3;
-
-        // Function to update ball position
-        function updateBall() {
-            // Update position
-            posX += velocityX;
-            posY += velocityY;
-
-            // Bounce off the walls
-            if (posX < 0 || posX > window.innerWidth - ball.clientWidth) {
-                velocityX = -velocityX;
-            }
-            if (posY < 0 || posY > window.innerHeight - ball.clientHeight) {
-                velocityY = -velocityY;
-            }
-
-            // Update ball position
-            ball.style.left = posX + 'px';
-            ball.style.top = posY + 'px';
-
-            // Repeat the update using requestAnimationFrame
-            requestAnimationFrame(updateBall);
-        }
-
-        // Start the animation
-        updateBall();
-    };
-    const timeElement = document.getElementById('time');
-
+const timeElement = document.getElementById("time");
 // Create a new Date object
 const currentDate = new Date();
-
 // Get the components of the date
 const year = currentDate.getFullYear();
 const month = currentDate.getMonth() + 1; // Months are zero-based, so add 1
