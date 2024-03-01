@@ -14,30 +14,49 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 820px;
+  width: 1440px;
   box-sizing: border-box;
   padding: 0;
-  background-color: var(--background-color);
+  background-color:#01748B;
   background: linear-gradient(
     90deg,
     rgb(68, 67, 95) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgb(1, 116, 139) 100%
   );
+  
+  overflow: hidden;
 }
-.back {
-  position: absolute;
-  top: 15%;
-  left: -3vw;
-  background-image: url(/images/back1.webp);
-  filter: grayscale(60%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100vh;
-  width: 100vw;
+.myImg{
+  /* border: 1px solid black; */
+  position: fixed;
+  top: 80px;
+  left: 152px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+  width:1000px;
+  overflow:hidden;
   animation: fadeIn ease 3s;
   z-index: 3;
+}
+.myImgtag {
+  /* border: 1px solid black; */
+  top: 50px;
+  left: 0px;
+  position: absolute;
+  filter: grayscale(60%);
+  width: 1000px;
+  max-width: 1000px;
+  min-width: 300px;
+  height: 1000px;
+  width: 1000px;
+  /* height: 1000px;
+  width: 1000px; */
+
+ 
 }
 .header {
   position: absolute;
@@ -47,22 +66,25 @@ body {
   height: fit-content;
   display: flex;
   z-index: 10;
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
+  font-family: var(--font-family);
+
 }
 .header .logo {
-  font-family: var(--font-family);
   position: relative;
   color: var(--font-color);
-  font-size: medium;
-  left: 45%;
+  /* font-size: medium; */
+  left: 88px;
   cursor: none;
   display: inline;
+  /* border: 1px solid black; */
+  clip-path: polygon(85% 15%, 100% 50%, 75% 92%, 26% 91%, 9% 58%, 11% 6%);
 }
 .header .nav-links {
+  /* border: 1px solid black; */
   margin-left: 70%;
 
-  font-family: var(--font-family);
 }
 .header .nav-links ul {
   padding: 0;
@@ -70,33 +92,49 @@ body {
 }
 .header .nav-links ul li {
   list-style: none;
-
+letter-spacing: -15px;
   display: inline-block;
+  
+
 }
 
 .header .nav-links ul li a {
   font-weight: 600;
   color: var(--font-color);
   text-decoration: none;
+
 }
 
-.nav-links ul li a:hover {
+.header .nav-links ul li a:hover {
   /* color: var(--nav-hover-color); */
   color: var(--theme-color);
   text-decoration: none;
   cursor: none;
   transition: 0.5s;
 }
-
+.header .time{
+  /* position: absolute; */
+  position: fixed;
+  left: 652px;
+  font-weight: 100;
+  color:#c1fd9e;
+}
 .backText {
-  display: inline-block;
+  /* display: inline-block; */
+  /* border: 1px solid black; */
   position: absolute;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 194px;
+  top: 220px;
+  width: 1054px;
+  height: 480px;
   font-family: "Source Code Pro", monospace;
   margin: 0;
   text-align: center;
   z-index: 2;
+  
   /* animation: fadeInText ease 3s; */
 }
 .backText h1 {
@@ -118,18 +156,20 @@ body {
   z-index: 200;
 }
 #visi {
+  /* border : 1px solid pink; */
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  background-color: var(--background-color);
-  background: linear-gradient(
+  /* background-color: var(--background-color); */
+  /* background: linear-gradient(
     90deg,
     rgb(68, 67, 95) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgb(1, 116, 139) 100%
-  );
+  ); */
   height: 500px;
   width: 700px;
   z-index: 10;
@@ -140,54 +180,63 @@ body {
 #visi #info {
   position: absolute;
   top: 20%;
-  background-color: var(--background-color);
-  background: linear-gradient(
+  /* background-color: var(--background-color); */
+  /* background: linear-gradient(
     90deg,
     rgb(68, 67, 95) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgb(1, 116, 139) 100%
-  );
+  ); */
   font-size: 12px;
   height: 300px;
   width: 700px;
 }
 
 #visi #info h2 {
+  
   color: var(--font-color);
   font-family: var(--font-family);
 }
-.visiHeader {
+.visiFooter {
   position: absolute;
-  top: 80%;
+  top: 60%;
   left: 33%;
   color: var(--font-color);
   font-family: var(--font-family);
   z-index: 1;
   border-radius: 20px;
   text-align: center;
+  /* border : 1px solid pink; */
+
 }
 
-.visiHeader .visiLinks ul {
-  margin: 10px;
+.visiFooter .visiLinks ul {
+  /* position: absolute;
+  top: 0%;
+  left: 40; */
+  /* border : 1px solid yellow; */
+  margin: 0px;
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
 
-.visiHeader .visiLinks ul li {
+.visiFooter .visiLinks ul li {
   border-radius: 20px;
+  /* border : 1px solid black; */
 
   padding: 10px; /* Adjust padding for spacing */
-  position: relative; /* Added position relative to .visiHeader .visiLinks ul li */
-
+  position: relative; /* Added position relative to .visiFooter .visiLinks ul li */
+margin-top: 0;
   margin: 0px 5px; /* Add spacing between each list item (adjust as needed) */
 }
 
 .linkhover {
+  font-size: 10px;
   display: none;
   position: absolute;
-  bottom: -10px; /* Adjusted position to appear below the li */
+  bottom: -3px; /* Adjusted position to appear below the li */
   left: 50%;
   transform: translateX(-50%);
   /* Additional styling properties for the span as needed */
@@ -204,18 +253,17 @@ body {
 }
 .location{
   font-family: var(--font-family);
-  position: absolute;
-  left: 5%;
-  top: 95%;
-  z-index: 4;
-  font-size: 12px;
-}
-.location a{
+  height: 18px;
   color: var(--theme-color);
-  text-decoration: none;
-  cursor: none;
+  position: absolute;
+  left: 72px;
+  top: 785px;
+  z-index: 4;
+  /* border: 1px solid var(--theme-color); */
+  font-size: 14px;
 
 }
+ 
 .cursor {
   position: absolute;
   height: 10px;
@@ -239,35 +287,7 @@ body {
   pointer-events: none;
 }
 
-.btn-masterful {
-  background-color: var(--theme-color);
-  color: #000;
-  border: none;
-  cursor: pointer;
-  border-radius: 50px;
-  /* position: relative; */
-  border: 1px solid pink;
-  height: 70px;
-  width: 70px;
-  position: absolute;
-  top: 47%;
-  left: 75vw;
-  overflow: hidden;
-  /* padding: 10px 20px; */
-  font-size: 20px;
-  font-family: var(--font-family);
-  opacity: 0.4;
-  text-align: center;
-}
 
-.btn-masterful .btn-txt {
-  display: none;
-  padding-left: 0.5rem;
-}
-.btn-masterful:hover {
-  background-color: #018dc5;
-  opacity: 1;
-}
 .attribute {
   position: absolute;
   bottom: 10px;
