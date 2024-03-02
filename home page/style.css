@@ -19,12 +19,12 @@ body {
   box-sizing: border-box;
   padding: 0;
   background-color:#01748B;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgb(68, 67, 95) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgb(1, 116, 139) 100%
-  );
+  ); */
   
   overflow: hidden;
 }
