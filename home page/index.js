@@ -5,6 +5,15 @@ document.addEventListener("mousemove", (e) => {
     "top:" + (e.pageY - 10) + "px;left:" + (e.pageX - 10) + "px"
   );
 });
+// document.getElementById("cap1").onclick = function() {
+//   var navLinks = document.querySelectorAll('.header .nav-links ul li');
+//   for (var i = 0; i < navLinks.length; i++) {
+//     navLinks[i].style.transition = "left 0.5s"; // Adjust the duration as needed
+//     navLinks[i].style.left = "-150px";
+//   }
+// }
+
+
 
 window.onload = function () {
   // Get the backText element
@@ -45,7 +54,6 @@ window.onload = function () {
     for (var i = 0; i < navLinks.length; i++) {
       navLinks[i].style.transition = "letter-spacing 0.5s"; // Adjust the duration as needed
       navLinks[i].style.letterSpacing = "0px";
-
     }
 
    
