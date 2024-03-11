@@ -21,8 +21,8 @@ window.onload = function () {
   setTimeout(function () {
     visi.style.display = "flex";
     visi.style.transition = "left 0.5s, top 0.5s";
-    visi.style.left = "30%";
-    visi.style.top = "70%";
+    visi.style.left = "31%";
+    visi.style.top = "73%";
   }, 4000);
 
   // Image transition
