@@ -12,6 +12,7 @@ body {
   background-color:  rgb(30, 85, 133);
   overflow: hidden;
   font-family: var(--font-family);
+  cursor: none;
 }
 
 .header {
