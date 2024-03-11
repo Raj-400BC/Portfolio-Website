@@ -236,6 +236,9 @@ body {
 }
 
 @media (max-width: 900px) {
+  .header{
+    font-size: 1.7vw;
+  }
   .myImg {
     display: none; /* Hide myImg when screen is smaller than 900px */
   }
@@ -250,15 +253,24 @@ body {
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
   }
-
+  #visi #info{
+    font-size: 1.7vw;
+  }
   #visi #info .fullscreen{
     color:#EED202;
     display: block;
     text-transform: capitalize;
+    font-size: 2.5vw;
   }
 
   #visi .visiFooter {
     display: none;
+  }
+  .location{
+    font-size: 1.2vw;
+  }
+  .cursor{
+    visibility: hidden;
   }
 }
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap");
