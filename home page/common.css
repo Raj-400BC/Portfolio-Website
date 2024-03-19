@@ -1,0 +1,301 @@
+:root {
+    --nav-hover-color: #fbf5df;
+    --font-family: PexicoMicro-Regular, sans-serif;
+    --font-color: #fbfbf9;
+    --theme-color: #c1fd9e;
+  }
+  
+  body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: rgb(30, 85, 133);
+    overflow: hidden;
+    font-family: var(--font-family);
+    cursor: none;
+  }
+  
+  .myImg {
+    position: fixed;
+    top: 10vh;
+    left: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 50vw;
+    overflow: hidden;
+    animation: fadeIn ease 3s;
+    z-index: 3;
+  }
+  
+  .myImgtag {
+    top: 6vh;
+    left: 0px;
+    position: absolute;
+    filter: grayscale(60%);
+    width: 100vh;
+    max-width: 100%;
+    min-width: 300px;
+    height: 100%;
+  }
+  
+  .header {
+    position: absolute;
+    top: 2vw;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+    font-size: 1.5vw;
+    text-align: center;
+  }
+  
+  .header .logo {
+    position: relative;
+    color: var(--font-color);
+    left: 7vw;
+    cursor: none;
+    display: inline;
+    /* font-size: clamp(.5rem,2.5, 1.5rem);
+    text-shadow: 1px 1px 1px #4af7ff, 1.5px 2px 1px #165bfb, 2px 2px 1px #4af7ff; */
+  }
+  
+  .header .nav-links {
+    margin-left: auto;
+    padding-right: 10vw;
+  }
+  
+  .header .nav-links ul {
+    padding: 0;
+    word-spacing: 3vw;
+  }
+  
+  .header .nav-links ul li {
+    list-style: none;
+    letter-spacing: 0vw;
+    display: inline-block;
+  }
+  
+  .header .nav-links ul li a {
+    font-weight: 600;
+    color: var(--font-color);
+    text-decoration: none;
+  }
+  .header .nav-links ul li a:hover {
+    color: var(--theme-color);
+    text-decoration: none;
+    cursor: none;
+    transition: 0.2s;
+    border-bottom: 0.1rem solid var(--font-color);
+    padding-bottom: 0.2rem;
+  }
+  
+  .header .time {
+    position: fixed;
+    left: 45vw;
+    font-weight: 100;
+    color: #c1fd9e;
+  }
+  
+  .backText {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 13vw;
+    top: 18vh;
+    width: 74vw;
+    height: 60vh;
+    margin: 0;
+    text-align: center;
+    z-index: 2;
+    font-family: "Source Code Pro", monospace;
+  }
+  
+  .backText h1 {
+    color: #fff;
+    font-size: 18vw;
+    opacity: 0.4;
+  }
+  
+  /* ... existing code ... */
+  #visi {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    height: 50%;
+    width: 50%;
+    max-width: 700px;
+    z-index: 10;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  #info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+    font-size: 0.8vw;
+  }
+  #visi #info .fullscreen {
+    /* ScreenSize Warning  */
+    display: none;
+  }
+  #info h2 {
+    color: var(--font-color);
+    font-family: var(--font-family);
+  }
+  
+  .visiFooter {
+    position: absolute;
+    bottom: -2vh;
+    width: 100%;
+  }
+  
+  .visiFooter .visiLinks ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .visiFooter .visiLinks ul li {
+    border-radius: 20px;
+    margin: 0 1.5vw;
+    position: relative;
+  }
+  .visiFooter .visiLinks ul li a {
+    color: #c1fd9e;
+    cursor: none;
+  }
+  .linkhover {
+    font-size: 1vw;
+    display: none;
+    position: absolute;
+    bottom: -1.3vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .logo1:hover + .linkhover {
+    display: block;
+  }
+  
+  .logo1 {
+    height: 2.5vw;
+    width: 2.5vw;
+  }
+  
+  /* Media query for responsiveness */
+  
+  .location {
+    height: 2vw;
+    color: var(--theme-color);
+    position: absolute;
+    left: 7vw;
+    top: 95vh;
+    font-size: 1vw;
+  }
+  .location a {
+    color: #c1fd9e;
+    text-decoration: none;
+  }
+  .cursor {
+    position: absolute;
+    height: 1vw;
+    width: 1vw;
+    border: 1px solid var(--theme-color);
+    border-radius: 0 0 0 100%;
+    border-left: transparent;
+    border-bottom: transparent;
+    z-index: 100;
+    pointer-events: none;
+  }
+  
+  .cursor::after {
+    content: "";
+    position: absolute;
+    height: 1vw;
+    width: 1vw;
+    border: 1px solid var(--theme-color);
+    margin: 0.3vw -0.5vw;
+    border-radius: 0 0 0 100%;
+    pointer-events: none;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      top: 300px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .header {
+      font-size: 2.7vw;
+    }
+    .nav-links{
+      display: none;
+    }
+    .myImg {
+      display: none; /* Hide myImg when screen is smaller than 900px */
+    }
+    .backText {
+      left: 50% !important;
+      top: 0% !important;
+      transform: translate(-50%, -0%) !important;
+      opacity: 0.2;
+    }
+    #visi {
+      height: 80%;
+      width: 80%;
+      left: 50% !important;
+      top:50% !important;
+      transform: translate(-50%, -50%) !important;
+    }
+    #visi #info {
+      font-size: 2.5vw;
+    }
+    #visi #info .fullscreen {
+      color: #eed202;
+      display: block;
+      text-transform: capitalize;
+      font-size: 5vw;
+    }
+  
+    #visi .visiFooter {
+      display: none;
+    }
+    
+    .location {
+      font-size: 2.7vw;
+    }
+    .cursor {
+      visibility: hidden;
+    }
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap");
+  
+  @font-face {
+    font-family: "PexicoMicro-Regular";
+    src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot");
+    src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.svg#PexicoMicro-Regular")
+        format("svg");
+  }
+  
