@@ -1,173 +1,66 @@
-:root {
-  --nav-hover-color: #fbf5df;
-  --font-family: PexicoMicro-Regular, sans-serif;
-  --font-color: #fbfbf9;
-  --theme-color: #c1fd9e;
-}
-
-body {
-  margin: 0;
-  box-sizing: border-box;
-  padding: 0;
-  background-color:  rgb(30, 85, 133);
-  overflow: hidden;
-  font-family: var(--font-family);
-  cursor: none;
-}
-
-.header {
-  position: absolute;
-  top: 2vw;
-  width: 100%;
-  display: flex;
-  z-index: 10;
-  font-size: 1.5vw;
-  text-align: center;
-}
-
-.header .logo {
-  position: relative;
-  color: var(--font-color);
-  left: 7vw;
-  cursor: none;
-  display: inline;
-}
-
-.header .nav-links {
-  margin-left: auto;
-  padding-right: 10vw;
-}
-
-.header .nav-links ul {
-  padding: 0;
-  word-spacing: 3vw;
-}
-
-.header .nav-links ul li {
-  list-style: none;
-  letter-spacing: 0vw;
-  display: inline-block;
-}
-
-.header .nav-links ul li a {
-  font-weight: 600;
-  color: var(--font-color);
-  text-decoration: none;
-}
-
-.header .nav-links ul li a:hover {
-  color: var(--theme-color);
-  text-decoration: none;
-  cursor: none;
-  transition: 0.5s;
-}
-
-.header .time {
-  position: fixed;
-  left: 45vw;
-  font-weight: 100;
-  color: #c1fd9e;
-}
-
-.backText {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 13vw;
-  top: 10vw;
-  width: 74vw;
-  height: 60vh;
-  margin: 0;
-  text-align: center;
-  z-index: 2;
-  opacity: 0.01;
-  font-family: "Source Code Pro", monospace;
-}
-
 .backText h1 {
   color: #fff;
-  font-size: 8vw;
+  font-size: 18vw;
+  opacity: 0.02;
 }
-
-.location {
-  height: 2vh;
-  color: var(--theme-color);
-  position: absolute;
-  left: 7vw;
-  top: 95vh;
-  font-size: 1vw;
-}
-
-.cursor {
-  position: absolute;
-  height: 1vw;
-  width: 1vw;
-  border: 1px solid var(--theme-color);
-  border-radius: 0 0 0 100%;
-  border-left: transparent;
-  border-bottom: transparent;
-  z-index: 100;
-  pointer-events: none;
-}
-
-.cursor::after {
-  content: "";
-  position: absolute;
-  height: 1vw;
-  width: 1vw;
-  border: 1px solid var(--theme-color);
-  margin: 0.3vw -0.5vw;
-  border-radius: 0 0 0 100%;
-  pointer-events: none;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,600&display=swap");
-
-@font-face {
-  font-family: "PexicoMicro-Regular";
-  src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot");
-  src: url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.svg#PexicoMicro-Regular")
-      format("svg");
-}
-
 .project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 60vw;
-  height: auto;
+  width: 80vw;
   margin: auto;
-  margin-top: 40vh;
+  margin-top: 30vh;
 }
 
 .project {
   background-color: #fff;
   padding: 2vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 2;
   margin: 0 1vw;
-  max-width: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.project:nth-child(1) {
+  background-image: url("../images/BubbleGame.png");
+  height: 38vh;
+  width: 38vw;
+}
+.project:nth-child(2) {
+  height: 30vh;
+  width: 30vw;
 }
 
 .project h2 {
+  display: none;
   font-size: 2vw;
   margin-bottom: 1vw;
 }
 
-/* Media query for responsiveness */
-@media (max-width: 1024px) {
-  .project {
-    min-width: 60%;
-    margin-bottom: 2vh;
+/* Currently nav-links are not visible on small screen sizes */
+
+@media (max-width: 900px) {
+  .header {
+    font-size: 2.7vw;
+  }
+  .project-container{
+    margin-top: 20vh;
+  
+    }
+  .project:nth-child(1) {
+    background-image: none;
+    height: 18vh;
+  width: 28vw;
+  }
+  .project:nth-child(2) {
+    height: 18vh;
+  width: 28vw;
+  }
+  .location {
+    font-size: 2.7vw;
+  }
+  .cursor {
+    visibility: hidden;
   }
 }
