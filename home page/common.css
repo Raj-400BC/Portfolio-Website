@@ -56,8 +56,10 @@
     left: 7vw;
     cursor: none;
     display: inline;
-    /* font-size: clamp(.5rem,2.5, 1.5rem);
-    text-shadow: 1px 1px 1px #4af7ff, 1.5px 2px 1px #165bfb, 2px 2px 1px #4af7ff; */
+    opacity: .9;
+
+    font-size: clamp(.5rem,2.5, 1.5rem);
+    text-shadow: 1px 1px 1px #4af7ff, 1.5px 2px 1px #165bfb, 2px 2px 1px #4af7ff;
   }
   
   .header .nav-links {
@@ -71,6 +73,7 @@
   }
   
   .header .nav-links ul li {
+    opacity: .9;
     list-style: none;
     letter-spacing: 0vw;
     display: inline-block;

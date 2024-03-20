@@ -1,3 +1,8 @@
+body {
+ 
+  background-color:#121212;
+}
+
 .backText h1 {
   color: #fff;
   font-size: 18vw;
@@ -14,26 +19,36 @@
 }
 
 .project {
-  background-color: #fff;
+  background-color: #292929;
+  color: #fff;
   padding: 2vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 1vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: .8;
+  z-index: 2;
+  height: 30vh;
+  width: 30vw;
 }
-.project:nth-child(1) {
-  background-image: url("../images/BubbleGame.png");
+.project:hover{
+  opacity: 1;
+  transform: scale(1.01);
+  transition: .5s;
+}
+ 
+/* .project:nth-child(1) {
   height: 38vh;
   width: 38vw;
 }
 .project:nth-child(2) {
   height: 30vh;
   width: 30vw;
-}
+} */
 
 .project h2 {
-  display: none;
+  /* display: none; */
   font-size: 2vw;
   margin-bottom: 1vw;
 }

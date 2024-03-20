@@ -1,32 +1,63 @@
+body {
+ 
+  background-color:#121212;
+}
 .backText h1 {
   color: #fff;
   font-size: 18vw;
   opacity: 0.02;
 }
 .project-container {
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 60vw;
-  height: auto;
+  width: 80vw;
   margin: auto;
-  margin-top: 40vh;
+  margin-top: 20vh;
+  gap: 2vh;
 }
 
 .project {
-  background-color: #fff;
+  border-radius: 10px;
+  background-color: #292929;
+  color: #fff;
   padding: 2vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex: 2;
   margin: 0 1vw;
-  max-width: 60%;
+  z-index: 2;
+  height: 20vh;
+  width: 58vw;
+  opacity: .8;
+}
+
+.project:hover {
+  opacity: 1;
+  transform: scale(1.01);
+  transition: .5s;
+}
+
+.project .blog-discription {
+  position: relative;
+  top: -3vh; /* Adjusted to maintain spacing */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.5; /* Adjusted line height for better readability */
+ 
+}
+
+.project .blog-date {
+  position:relative;
+  top: -2vh; /* Adjusted to maintain spacing */
 }
 
 .project h2 {
   font-size: 2vw;
   margin-bottom: 1vw;
 }
+
 /* Currently nav-links are not visible on small screen sizes */
 
 /* Media query for responsiveness */
