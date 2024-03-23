@@ -57,19 +57,17 @@
     cursor: none;
     display: inline;
     opacity: .9;
-
-    font-size: clamp(.5rem,2.5, 1.5rem);
-    text-shadow: 1px 1px 1px #4af7ff, 1.5px 2px 1px #165bfb, 2px 2px 1px #4af7ff;
   }
   
   .header .nav-links {
     margin-left: auto;
-    padding-right: 10vw;
+    padding-right: 8vw;
   }
   
   .header .nav-links ul {
     padding: 0;
     word-spacing: 3vw;
+
   }
   
   .header .nav-links ul li {
@@ -77,14 +75,22 @@
     list-style: none;
     letter-spacing: 0vw;
     display: inline-block;
+    /* border: 1px solid pink; */
+    padding: 1vh 2vw;
+    /* margin: 1vh 2vw; */
+    
   }
-  
+
   .header .nav-links ul li a {
+    
     font-weight: 600;
     color: var(--font-color);
     text-decoration: none;
   }
+ 
+  
   .header .nav-links ul li a:hover {
+
     color: var(--theme-color);
     text-decoration: none;
     cursor: none;
@@ -92,7 +98,8 @@
     border-bottom: 0.1rem solid var(--font-color);
     padding-bottom: 0.2rem;
   }
-  
+    
+   
   .header .time {
     position: fixed;
     left: 45vw;
@@ -301,4 +308,4 @@
       url("https://db.onlinewebfonts.com/t/852be80a3188170a0c4ebb2534efb54d.svg#PexicoMicro-Regular")
         format("svg");
   }
-  
+ 

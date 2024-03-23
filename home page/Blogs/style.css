@@ -1,7 +1,7 @@
 body {
- 
-  background-color:#121212;
+  background-color: #121212;
 }
+
 .backText h1 {
   color: #fff;
   font-size: 18vw;
@@ -17,6 +17,7 @@ body {
   margin: auto;
   margin-top: 20vh;
   gap: 2vh;
+  font-family: "Source Sans Pro", "Microsoft Yahei", sans-serif;
 }
 
 .project {
@@ -29,54 +30,82 @@ body {
   z-index: 2;
   height: 20vh;
   width: 58vw;
-  opacity: .8;
+  line-height: 2.7vh;
 }
 
 .project:hover {
   opacity: 1;
   transform: scale(1.01);
-  transition: .5s;
+  transition: 0.5s;
 }
-
+.project .blog-title {
+  position: relative;
+  height: 10vh;
+  margin-top: -3vh;
+  opacity: 0.8;
+}
 .project .blog-discription {
   position: relative;
-  top: -3vh; /* Adjusted to maintain spacing */
+  top: -4vh;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  line-height: 1.5; /* Adjusted line height for better readability */
- 
+  opacity: 0.6;
 }
 
 .project .blog-date {
-  position:relative;
-  top: -2vh; /* Adjusted to maintain spacing */
-}
-
-.project h2 {
-  font-size: 2vw;
-  margin-bottom: 1vw;
+  position: relative;
+  top: -2.5vh;
+  opacity: 0.6;
 }
 
 /* Currently nav-links are not visible on small screen sizes */
 
 /* Media query for responsiveness */
+
 @media (max-width: 900px) {
   .header {
     font-size: 2.7vw;
   }
-  .project-container{
-  margin-top: 20vh;
-
-  }
   .project {
-    height: 18vh;
-  width: 28vw;
+    height: 15vh;
+    width: 58vw;
+  }
+  .project .blog-title {
+    top: 0.7vh;
+  }
+  .project-container .project .blog-discription {
+    top: -5vh;
+  }
+
+  .project .blog-date {
+    margin-top: -4.7vh;
   }
   .location {
-    font-size: 2.7vw;
+    font-size: 2.5vw;
   }
   .cursor {
     visibility: hidden;
+  }
+}
+
+@media (max-width: 375px) {
+  .project-container .project .blog-title {
+    font-size: 3vw;
+  }
+  .project-container .project .blog-discription {
+    font-size: 2.9vw;
+  }
+  .project-container .project .blog-date {
+    font-size: 2.9vw;
+  }
+}
+@media (max-width: 360px) {
+  .project-container .project .blog-discription {
+    top: -4vh;
+    line-height: 2vh;
+  }
+  .project-container .project .blog-date {
+    margin-top: -2.5vh;
   }
 }
