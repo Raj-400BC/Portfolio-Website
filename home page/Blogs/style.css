@@ -38,6 +38,20 @@ body {
   transform: scale(1.01);
   transition: 0.5s;
 }
+
+/* .readMore {
+  position: absolute;
+  display: none;
+  height: 75vh;
+  width: 75vw;
+  overflow-y: visible;
+  background-color: antiquewhite;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+} */
+
 .project .blog-title {
   position: relative;
   height: 10vh;

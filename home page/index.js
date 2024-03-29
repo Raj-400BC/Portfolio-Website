@@ -28,7 +28,7 @@ window.onload = function () {
   // Image transition
   setTimeout(function () {
     myImg.style.transition = "left 1.5s";
-    myImg.style.left = "65vw";
+    myImg.style.left = "60vw";
     myImg.style.display = "fixed"; //
   }, 3000);
 

@@ -57,11 +57,13 @@
     cursor: none;
     display: inline;
     opacity: .9;
+    font-size: clamp(.5rem,2.5, 1.5rem);
+    text-shadow: 1px 1px 1px #4af7ff, 1.5px 2px 1px #165bfb, 2px 2px 1px #4af7ff;
   }
   
   .header .nav-links {
     margin-left: auto;
-    padding-right: 8vw;
+    padding-right: 10vw;
   }
   
   .header .nav-links ul {
@@ -75,10 +77,7 @@
     list-style: none;
     letter-spacing: 0vw;
     display: inline-block;
-    /* border: 1px solid pink; */
-    padding: 1vh 2vw;
-    /* margin: 1vh 2vw; */
-    
+
   }
 
   .header .nav-links ul li a {
